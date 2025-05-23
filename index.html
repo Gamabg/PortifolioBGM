@@ -1,40 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portifólio Bruno Gama Masseiras</title>
-    <link rel="stylesheet" href="./CSS/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"/>
-  </head>
-  <body>
-    <section class="container bg-image-1">
-      <header class="header-page">
-        <h1>Bruno Gama</h1>
-        <nav class="header-menu">
-          <ul>
-            <li><a href="#tela1">link</a></li>
-            <li><a href="#tela2">link</a></li>
-            <li><a href="#tela3">link</a></li>
-            <li><a href="">link</a></li>
-          </ul>
-        </nav>
-      </header>
-      <div class="hero">
-        <h2>Seja Bem Vindo ao <span>Meu Portifólio</span></h2>
-        <p>
-          Me chamo Bruno Gama Masseiras, tenho 18 anos.
-        </p>
-        <a href="" class="btn">Saiba Mais</a>
-      </div>
-    </section>
 
-    <section class="container bg-blue" id="tela1">Em desenvolvimento</section>
-    <section class="container bg-image-2" id="tela2">Em desenvolvimento</section>
-    <section class="container bg-blue" id="tela3">Em desenvolvimento</section>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portifólio Bruno Gama Masseiras</title>
+  <link rel="stylesheet" href="./CSS/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <section class="container bg-image-1">
+    <header class="header-page">
+      <h1>Bruno Gama</h1>
+      <nav class="header-menu">
+        <ul>
+          <li><a href="#tela1">Sobre Mim</a></li>
+          <li><a href="#tela2">Minhas Experiências</a></li>
+          <li><a href="#tela3">Meus Cursos</a></li>
+          <li><a href="#tela4">Meus Porjetos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="hero">
+      <h2>Seja Bem Vindo ao <span>Meu Portifólio</span></h2>
+      <p>
+        Me chamo Bruno Gama Masseiras, tenho 18 anos.
+      </p>
+      <a href="#tela1" class="btn">Saiba Mais</a>
+    </div>
+  </section>
+
+
+  <section class="container bg-blue" id="tela1">
+    <div class="about">
+      <img src="./IMG/perfil.jpg" alt="Foto de Bruno" class="about-img">
+      <div class="about-text">
+        <h2>Sobre Mim</h2>
+        <p>Sou Bruno Gama Masseiras, desenvolvedor apaixonado por tecnologia e soluções criativas. Gosto de desafios que
+          me fazem evoluir como profissional e pessoa. Atualmente focado em aprender mais sobre desenvolvimento web e
+          boas práticas de programação.</p>
+        <div class="skills">
+          <span>FullStack</span>
+          <span>Designer</span>
+          <span></span>
+          <span>Monitor de Infraestrutura de TI</span>
+        </div>
+        <a href="https://w.app/brunogama" class="btn">Entre em Contato</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="container bg-light" id="tela2">
+    <div class="experience">
+      <h2>Minhas Experiências</h2>
+      <div class="experience-item">
+        <h3>Monitor de TI - FIAP</h3>
+        <p>Atuei como monitor de Tecnologia da Informação na FIAP, auxiliando colegas e professores com dúvidas
+          técnicas, organização de eventos e suporte em atividades acadêmicas. Desenvolvi habilidades de comunicação,
+          trabalho em equipe e resolução de problemas.</p>
+        <span class="experience-period">01/2023 - 01/2025</span>
+      </div>
+      <div class="experience-item">
+        <h3>Freelancer</h3>
+        <p>Desenvolvedor Front-End e Designer Gráfico, especializado em criar interfaces intuitivas, responsivas e com forte apelo visual. Atuo como freelancer, unindo criatividade e técnica para transformar ideias em soluções digitais impactantes.</p>
+        <span class="experience-period">01/2025 - Atual</span>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="container bg-blue" id="tela3">Em desenvolvimento</section>
+  
+  
+  <section class="container bg-image-1" id="tela4">Em desenvolvimento</section>
+</body>
+
 </html>
