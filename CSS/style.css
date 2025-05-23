@@ -168,6 +168,12 @@ a:hover {
   font-weight: bold;
   font-size: 1.4rem;
   transition: transform 0.3s;
+  
+  &:hover {
+    background-color: transparent;
+    border: 1px solid var(--color--light);
+    transition: .5s;
+  }
 }
 
 .skills span:hover {
