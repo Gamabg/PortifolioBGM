@@ -1,14 +1,13 @@
 :root {
-  --color-black: #000;
-  --color-light: #f4f4f4;
-  --color-pink: #dc143c;
-  --bg-gradient: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+  --color--black: #000;
+  --color--light: #f4f4f4;
+  --color--pink: #dc143c;
+  --bg--gradient: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
 }
 
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -19,8 +18,6 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: var(--color-black);
-  color: var(--color-light);
 }
 
 ul, ol {
@@ -29,18 +26,19 @@ ul, ol {
 
 a {
   text-decoration: none;
-  color: var(--color-light);
+  color: var(--color--light);
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: color 0.7s;
 }
 
 a:hover {
-  color: var(--color-pink);
+  color: var(--color--pink);
 }
 
 .container {
   width: 100%;
   min-height: 100vh;
+  color: var(--color--light);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -48,11 +46,11 @@ a:hover {
 }
 
 .bg-black {
-  background-color: var(--color-black);
+  background-color: var(--color--black);
 }
 
 .bg-image-1 {
-  background-image: var(--bg-gradient), url(../IMG/img1.jpg);
+  background-image: var(--bg--gradient), url(../IMG/img1.jpg);
 }
 
 .header-page {
@@ -62,10 +60,10 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
-}
 
-.header-page h1 {
-  font-size: 3rem;
+  & h1 {
+    font-size: 3rem;
+  }
 }
 
 .header-menu ul {
@@ -80,35 +78,35 @@ a:hover {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  text-align: center;
-}
 
-.hero h2 {
-  font-size: clamp(2.4rem, 4vw, 6rem);
-}
+  & h2 {
+    font-size: clamp(24px, 4vw, 6rem);
 
-.hero h2 span {
-  color: var(--color-pink);
-}
+    & span {
+      color: var(--color--pink);
+    }
+  }
 
-.hero p {
-  width: 60%;
-  text-wrap: balance;
+  & p {
+    width: 60%;
+    text-align: center;
+    text-wrap: balance;
+  }
 }
 
 .btn {
-  background-color: var(--color-pink);
+  background-color: var(--color--pink);
   padding: 0.8rem 3rem;
   border-radius: 8rem;
-  color: var(--color-light);
-  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid var(--color--light);
+    transition: 0.5s;
+  }
 }
 
-.btn:hover {
-  background-color: transparent;
-  border: 1px solid var(--color-light);
-}
-
+/* About */
 .about {
   display: flex;
   align-items: center;
@@ -123,7 +121,7 @@ a:hover {
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--color-pink);
+  border: 4px solid var(--color--pink);
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }
 
@@ -138,6 +136,11 @@ a:hover {
   font-size: 3rem;
 }
 
+.about-text p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
 .skills {
   display: flex;
   gap: 10px;
@@ -145,66 +148,254 @@ a:hover {
 }
 
 .skills span {
-  background: var(--color-pink);
+  background: var(--color--pink);
   padding: 0.5rem 1.5rem;
   border-radius: 20px;
   font-weight: bold;
   font-size: 1.4rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid var(--color--light);
+    transition: 0.5s;
+  }
 }
 
 .skills span:hover {
   transform: scale(1.1);
-  background-color: transparent;
-  border: 1px solid var(--color-light);
 }
 
-.experience, .courses, .projects, .skills-icons {
+/* Experience */
+.experience {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.experience h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--color--pink);
+}
+
+.experience-item {
+  background: var(--color--light);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid var(--color--pink);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+}
+
+.experience-item h3 {
+  font-size: 2.2rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.experience-item p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.experience-period {
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Courses */
+.courses {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
-.experience h2, .courses h2, .projects h2, .skills-icons h2 {
+.courses h2 {
   font-size: 3rem;
   text-align: center;
-  color: var(--color-pink);
+  color: var(--color--pink);
   margin-bottom: 30px;
 }
 
-.experience-item, .course-card, .project-card {
-  background: var(--color-light);
-  padding: 20px;
-  border-radius: 10px;
-  border-left: 5px solid var(--color-pink);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-  color: #000;
-}
-
-.course-card:hover, .project-card:hover, .experience-item:hover {
-  transform: translateY(-5px);
-}
-
-.courses-grid, .projects-grid, .icons-grid {
+.courses-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+}
+
+.course-card {
+  background: var(--color--light);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid var(--color--pink);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s, background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #000;
+}
+
+.course-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  font-size: 1.4rem;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--color--pink);
+  color: var(--color--light);
+}
+
+.course-card:hover h3, .course-card:hover p {
+  color: var(--color--light);
+}
+
+/* Projects */
+.projects {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.projects h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--color--pink);
+  margin-bottom: 30px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: var(--color--light);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+  transition: transform 0.3s;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .project-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
 }
 
+.project-card h3 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+.project-card p {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Skills Icons */
+.skills-icons {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.skills-icons h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--color--pink);
+  margin-bottom: 30px;
+}
+
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Footer */
 .footer {
   padding: 20px;
   text-align: center;
   background: #111;
+  color: var(--color--light);
+
+  & span{
+    color: var(--color--pink);
+  }
 }
 
-.footer span {
-  color: var(--color-pink);
+/* ================== MEDIA QUERIES ================== */
+
+@media (max-width: 768px) {
+  .header-menu ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .hero p {
+    width: 90%;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .header-page {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 2.8rem;
+  }
+
+  .about-text h2, .experience h2, .courses h2, .projects h2, .skills-icons h2 {
+    font-size: 2.4rem;
+  }
+
+  .header-page h1 {
+    font-size: 2.4rem;
+  }
+
+  .btn {
+    padding: 0.6rem 2rem;
+  }
 }
