@@ -1,5 +1,5 @@
 :root {
-  --color--blue: #002;
+  --color--black: #000;
   --color--light: #f4f4f4;
   --color--pink: #dc143c;
   --bg--gradient: linear-gradient(to right,
@@ -48,8 +48,8 @@ a:hover {
   background-attachment: fixed;
 }
 
-.bg-blue {
-  background-color: var(--color--blue);
+.bg-black {
+  background-color: var(--color--black);
 }
 
 .bg-image-1 {
@@ -62,7 +62,8 @@ a:hover {
 }
 
 .header-page {
-  width: 100%;
+  margin-left: 25px;
+  margin-right: 25px;
   height: 100px;
   /* background-color: gold; */
   display: flex;
@@ -230,5 +231,155 @@ a:hover {
   color: #000;
 }
 
+.courses {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
 
-/* normalize css */
+.courses h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--color--pink);
+  margin-bottom: 30px;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  background: var(--color--light);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid var(--color--pink);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s, background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #000;
+}
+
+.course-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  font-size: 1.4rem;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--color--pink);
+  color: var(--color--light);
+}
+
+.course-card:hover h3,
+.course-card:hover p {
+  color: var(--color--light);
+}
+
+.projects {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.projects h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--color--pink);
+  margin-bottom: 30px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: var(--color--light);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+  text-decoration: none;
+  color: #000;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  font-size: 2rem;
+  margin: 15px 20px 5px 20px;
+  font-weight: 600;
+}
+
+.project-card p {
+  font-size: 1.4rem;
+  margin: 0 20px 20px 20px;
+  line-height: 1.5;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.skills-icons {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.skills-icons h2 {
+  font-size: 3rem;
+  color: var(--color--pink);
+  margin-bottom: 30px;
+}
+
+.icons-grid {
+  display: flex;
+  flex-direction: row;
+  
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icons-grid img {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s;
+}
+
+.icons-grid img:hover {
+  transform: scale(1.2);
+}
+
+
+.footer {
+  background-color: var(--color--black);
+  color: var(--color--light);
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 1.4rem;
+  border-top: 2px solid var(--color--pink);
+}
+
+.footer p {
+  margin: 0;
+  & span {
+      color: var(--color--pink);
+    }
+}
