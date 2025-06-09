@@ -338,6 +338,7 @@ a:hover {
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   gap: 20px;
   justify-items: center;
+  justify-self: center;
   width: 60%;
   height: 60%;
 }
