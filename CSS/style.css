@@ -1,3 +1,4 @@
+/* ================== VARIÁVEIS E RESET ================== */
 :root {
   --color--black: #000;
   --color--light: #f4f4f4;
@@ -35,6 +36,7 @@ a:hover {
   color: var(--color--pink);
 }
 
+/* ================== CONTAINER E BACKGROUND ================== */
 .container {
   width: 100%;
   min-height: 100vh;
@@ -53,6 +55,7 @@ a:hover {
   background-image: var(--bg--gradient), url(../IMG/img1.jpg);
 }
 
+/* ================== HEADER ================== */
 .header-page {
   margin: 0 25px;
   height: 100px;
@@ -60,10 +63,10 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
+}
 
-  & h1 {
-    font-size: 3rem;
-  }
+.header-page h1 {
+  font-size: 3rem;
 }
 
 .header-menu ul {
@@ -71,6 +74,7 @@ a:hover {
   gap: 20px;
 }
 
+/* ================== HERO ================== */
 .hero {
   min-height: calc(100vh - 100px);
   display: flex;
@@ -78,35 +82,35 @@ a:hover {
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
 
-  & h2 {
-    font-size: clamp(24px, 4vw, 6rem);
+.hero h2 {
+  font-size: clamp(24px, 4vw, 6rem);
+}
 
-    & span {
-      color: var(--color--pink);
-    }
-  }
+.hero h2 span {
+  color: var(--color--pink);
+}
 
-  & p {
-    width: 60%;
-    text-align: center;
-    text-wrap: balance;
-  }
+.hero p {
+  width: 60%;
+  text-align: center;
+  text-wrap: balance;
 }
 
 .btn {
   background-color: var(--color--pink);
   padding: 0.8rem 3rem;
   border-radius: 8rem;
-
-  &:hover {
-    background-color: transparent;
-    border: 1px solid var(--color--light);
-    transition: 0.5s;
-  }
+  transition: background-color 0.5s, border 0.5s;
 }
 
-/* About */
+.btn:hover {
+  background-color: transparent;
+  border: 1px solid var(--color--light);
+}
+
+/* ================== ABOUT ================== */
 .about {
   display: flex;
   align-items: center;
@@ -153,20 +157,16 @@ a:hover {
   border-radius: 20px;
   font-weight: bold;
   font-size: 1.4rem;
-  transition: transform 0.3s;
-
-  &:hover {
-    background-color: transparent;
-    border: 1px solid var(--color--light);
-    transition: 0.5s;
-  }
+  transition: transform 0.3s, background-color 0.5s, border 0.5s;
 }
 
 .skills span:hover {
+  background-color: transparent;
+  border: 1px solid var(--color--light);
   transform: scale(1.1);
 }
 
-/* Experience */
+/* ================== EXPERIENCE ================== */
 .experience {
   max-width: 800px;
   margin: 0 auto;
@@ -215,7 +215,7 @@ a:hover {
   color: #000;
 }
 
-/* Courses */
+/* ================== COURSES ================== */
 .courses {
   max-width: 1200px;
   margin: 0 auto;
@@ -267,7 +267,7 @@ a:hover {
   color: var(--color--light);
 }
 
-/* Projects */
+/* ================== PROJECTS ================== */
 .projects {
   max-width: 1200px;
   margin: 0 auto;
@@ -319,7 +319,7 @@ a:hover {
   transform: translateY(-5px);
 }
 
-/* Skills Icons */
+/* ================== SKILLS ICONS (Linguagens e Ferramentas) ================== */
 .skills-icons {
   max-width: 1000px;
   margin: 0 auto;
@@ -338,22 +338,40 @@ a:hover {
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   gap: 20px;
   justify-items: center;
+  width: 60%;
+  height: 60%;
 }
 
-/* Footer */
+/* Responsividade para Skills Icons */
+@media (max-width: 768px) {
+  .icons-grid {
+    width: 100%;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .icons-grid {
+    width: 100%;
+    gap: 18px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ================== FOOTER ================== */
 .footer {
   padding: 20px;
   text-align: center;
   background: #111;
   color: var(--color--light);
-
-  & span{
-    color: var(--color--pink);
-  }
 }
 
-/* ================== MEDIA QUERIES ================== */
+.footer span {
+  color: var(--color--pink);
+}
 
+/* ================== MEDIA QUERIES GERAIS ================== */
 @media (max-width: 768px) {
   .header-menu ul {
     flex-direction: column;
