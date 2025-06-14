@@ -125,6 +125,38 @@ a:hover {
   justify-content: center;
   gap: 20px;
 }
+
+/* ================== HERO DIGITANDO ================== */
+.hero h2.digitando {
+  font-family: inherit;
+  font-size: clamp(24px, 4vw, 6rem);
+  white-space: nowrap;
+  overflow: hidden;
+  /* border-right: 3px solid var(--color--pink); */
+  width: 0ch;
+  animation: digitar 2.5s steps(15) forwards;
+  /* Mantém responsivo e cor do seu tema */
+  color: inherit;
+  transition: none;
+}
+
+.hero h2.digitando span {
+  color: var(--color--pink);
+}
+
+/* Remova ou comente o bloco abaixo para tirar o cursor piscando */
+/*
+.hero h2.digitando::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: var(--color--pink);
+  animation: blink 0.7s steps(1) infinite;
+  vertical-align: bottom;
+}
+*/
+
 .hero h2 {
   justify-self: center;
   font-size: clamp(24px, 4vw, 6rem);
@@ -462,4 +494,19 @@ a:hover {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px);}
   to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes digitar {
+  to {
+    width: 11ch; /* BrunoGama tem 9, ajuste se mudar o texto */
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
 }
